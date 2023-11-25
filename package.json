@@ -20,8 +20,8 @@
 		"node": "18.x"
 	},
 	"scripts": {
-		"start": "nodemon src/index.ts --exec babel-node -x",
-		"dev": "nodemon src/index.ts --exec babel-node -x",
+		"start": "nodemon src/index.js",
+		"dev": "nodemon src/index.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [],

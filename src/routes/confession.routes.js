@@ -1,13 +1,12 @@
-import { Request, Response } from 'express';
 const _express = require('express');
 const route = _express.Router();
 const nodemailer = require('nodemailer');
 
-route.get('/active', (req: Request, res: Response) => {
+route.get('/active', (req, res) => {
 	res.status(200).json({ message: 'active' });
 });
 
-route.post('/setConfession', (req: Request, res: Response) => {
+route.post('/setConfession', (req, res) => {
 	res.status(200).json(req.body);
 	console.log(req.body);
 
@@ -21,7 +20,7 @@ route.post('/setConfession', (req: Request, res: Response) => {
 		tls: { rejectUnauthorized: false },
 	});
 
-	transporter.verify(function (error: Error) {
+	transporter.verify(function (error) {
 		if (error) {
 			console.log(error);
 		} else {
@@ -52,7 +51,7 @@ route.post('/setConfession', (req: Request, res: Response) => {
 			<br />`,
 	};
 
-	transporter.sendMail(mailOptions, (error: Error) => {
+	transporter.sendMail(mailOptions, (error) => {
 		error ? console.log(error) : console.log('📨 Correo enviado. 📫');
 	});
 });
