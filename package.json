@@ -16,6 +16,9 @@
 	"name": "server",
 	"version": "1.0.0",
 	"main": "index.ts",
+	"engines": {
+		"node": "18.x"
+	},
 	"scripts": {
 		"start": "nodemon src/index.ts --exec babel-node -x",
 		"dev": "nodemon src/index.ts --exec babel-node -x",
