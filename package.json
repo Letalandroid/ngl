@@ -15,7 +15,7 @@
 	},
 	"name": "server",
 	"version": "1.0.0",
-	"main": "index.ts",
+	"main": "index.js",
 	"engines": {
 		"node": "18.x"
 	},
