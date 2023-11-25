@@ -7,7 +7,6 @@ route.get('/active', (req, res) => {
 });
 
 route.post('/setConfession', (req, res) => {
-	res.status(200).json(req.body);
 	console.log(req.body);
 
 	const transporter = nodemailer.createTransport({
