@@ -17,6 +17,7 @@
 	"version": "1.0.0",
 	"main": "index.ts",
 	"scripts": {
+		"start": "nodemon src/index.ts --exec babel-node -x",
 		"dev": "nodemon src/index.ts --exec babel-node -x",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
