@@ -22,7 +22,7 @@ route.post('/setConfession', (req, res) => {
 
 	transporter.verify(function (error) {
 		if (error) {
-			console.log(error);
+			res.status(400).json(error);
 		} else {
 			console.log('Server is ready to take our messages');
 		}
