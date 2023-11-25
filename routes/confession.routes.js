@@ -52,7 +52,9 @@ route.post('/setConfession', (req, res) => {
 	};
 
 	transporter.sendMail(mailOptions, (error) => {
-		error ? console.log(error) : console.log('📨 Correo enviado. 📫');
+		error
+			? res.status(400).json(error)
+			: res.status(200).json('📨 Correo enviado. 📫');
 	});
 });
 
