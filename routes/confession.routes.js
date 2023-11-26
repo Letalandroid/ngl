@@ -1,5 +1,5 @@
-const _express = require('express');
-const route = _express.Router();
+const express = require('express');
+const route = express.Router();
 const nodemailer = require('nodemailer');
 
 route.get('/active', (req, res) => {
@@ -37,15 +37,15 @@ route.post('/setConfession', (req, res) => {
 		subject: `😍 ${username} te ha confesado algo!! 💖`,
 		html: `
 			<div style='font-size: 18px; line-height: 30px;'>
-				🔴  ${message}<br/><br/>
-				🌐  Ip: <b>${ip}</b><br/>
-				🏙️ City: <b>${city}</b><br/>
-				🌎 Region: <b>${region}</b><br/>
-				🚩 Country: <b>${country}</b><br/>
-				🚂 Localization: <b>${loc}</b><br/>
-				🗄️ Org: <b>${org}</b><br/>
-				📩 Postal: <b>${postal}</b><br/>
-				⛅ Timezone: <b>${timezone}</b><br/>
+				🔴 \t${message}<br/><br/>
+				🌐 \tIp: <b>${ip}</b><br/>
+				🏙️ \tCity: <b>${city}</b><br/>
+				🌎 \tRegion: <b>${region}</b><br/>
+				🚩 \tCountry: <b>${country}</b><br/>
+				🚂 \tLocalization: <b>${loc}</b><br/>
+				🗄️ \tOrg: <b>${org}</b><br/>
+				📩 \tPostal: <b>${postal}</b><br/>
+				⛅ \tTimezone: <b>${timezone}</b><br/>
 			</div>
 			<br />`,
 	};
