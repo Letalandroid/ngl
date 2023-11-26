@@ -38,7 +38,7 @@ route.post('/setConfession', (req, res) => {
 		html: `
 			<div style='font-size: 18px; line-height: 30px;'>
 				🔴 ${message}<br/><br/>
-				🌐 Ip: <b>${ip}</b><br/>
+				🌐  Ip: <b>${ip}</b><br/>
 				🏙️ City: <b>${city}</b><br/>
 				🌎 Region: <b>${region}</b><br/>
 				🚩 Country: <b>${country}</b><br/>
