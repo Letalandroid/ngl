@@ -37,7 +37,7 @@ route.post('/setConfession', (req, res) => {
 		subject: `😍 ${username} te ha confesado algo!! 💖`,
 		html: `
 			<div style='font-size: 18px; line-height: 30px;'>
-				🔴 ${message}<br/><br/>
+				🔴  ${message}<br/><br/>
 				🌐  Ip: <b>${ip}</b><br/>
 				🏙️ City: <b>${city}</b><br/>
 				🌎 Region: <b>${region}</b><br/>
@@ -53,7 +53,7 @@ route.post('/setConfession', (req, res) => {
 	transporter.sendMail(mailOptions, (error) => {
 		error
 			? res.status(400).json(error)
-			: res.status(200).json('📨 Correo enviado. 📫');
+			: res.status(200).json('😍 Confesión enviada 🤭');
 	});
 });
 
